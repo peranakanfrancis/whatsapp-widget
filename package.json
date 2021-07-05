@@ -1,0 +1,60 @@
+{
+  "name": "whatsapp-widget",
+  "version": "1.2.0",
+  "description": "A simple WhatsApp live chat widget for your website.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicjar/whatsapp-widget.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "live-chat",
+    "widget",
+    "html",
+    "css",
+    "javascript",
+    "chat"
+  ],
+  "author": {
+    "name": "Fajar Setya Budi",
+    "email": "fajarsetya@live.com",
+    "url": "https://magicjar.github.io"
+  },
+  "style": "dist/css/whatsapp-widget.css",
+  "sass": "scss/default.scss",
+  "main": "dist/js/whatsapp-widget.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magicjar/whatsapp-widget/issues"
+  },
+  "homepage": "https://github.com/magicjar/whatsapp-widget#readme",
+  "files": [
+    "dist/**/*.{css,js}",
+    "src/**/*.{js}",
+    "scss/**/*.scss"
+  ],
+  "scripts": {
+    "compile": "npm-run-all --parallel compile:*",
+    "compile:css": "node-sass --output-style expanded --precision 6 scss/default.scss dist/css/whatsapp-widget.css",
+    "compile:js": "rollup --config",
+    "lint:js": "eslint src",
+    "minify": "npm-run-all --parallel minify:*",
+    "minify:css": "csso dist/css/whatsapp-widget.css --output dist/css/whatsapp-widget.min.css",
+    "minify:js": "terser --compress --mangle --comments \"/^!/\" --output dist/js/whatsapp-widget.min.js dist/js/whatsapp-widget.js",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "nodemon --watch scss/ --ext scss --exec \"npm-run-all compile:css minify:css\"",
+    "watch:js": "nodemon --watch src/ --ext js --exec \"npm-run-all lint:js compile:js minify:js\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-babel": "^5.1.0",
+    "csso-cli": "^3.0.0",
+    "eslint": "^7.6.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.21.0",
+    "terser": "^4.8.0"
+  }
+}
