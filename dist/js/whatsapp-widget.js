@@ -113,11 +113,11 @@
     introduction: 'string'
   };
   var DefaultForm = [{
-    data: 'name',
+    data: 'name 名字',
     type: 'text',
     required: true
   }, {
-    data: 'message',
+    data: 'message 信息',
     type: 'text',
     required: true
   }];
