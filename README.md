@@ -19,10 +19,10 @@ A simple WhatsApp live chat widget for your website.
 ## Getting started
 
 There are some ways to import the package
-- [Download the latest release.](https://github.com/magicjar/whatsapp-widget/releases)
+- [Download the latest release.](https://github.com/peranakanfrancis/whatsapp-widget/releases)
 - Clone the repo:
 
-    `git clone https://github.com/magicjar/whatsapp-widget.git`
+    `git clone https://github.com/peranakanfrancis/whatsapp-widget.git`
     
 - Install with [npm](https://www.npmjs.com/):
     
@@ -144,4 +144,4 @@ introduction | string | '' | Chat introduction
 
 Copyright (c) 2020 - Fajar Setya Budi.
 
-WhatsApp Widget released under the [MIT License](https://github.com/magicjar/whatsapp-widget/blob/master/LICENSE).
+WhatsApp Widget released under the [MIT License](https://github.com/peranakanfrancis/whatsapp-widget/blob/master/LICENSE).
